@@ -247,9 +247,164 @@ Stage 4: 自愈系统
 | AI/LLM | OpenAI / Ollama | Azure OpenAI |
 | Agent 框架 | LangChain / AutoGen | - |
 
-### 4.3 安全边界
+### 4.3 安全边界：三大核心原则
 
-**必须设置的操作边界**：
+AI Agent 的能力越强，安全边界越重要。必须遵循三大原则：
+
+#### 原则一：最小权限（Principle of Least Privilege）
+
+**定义**：Agent 只拥有完成任务所需的最小权限。
+
+**实现方式**：
+
+```yaml
+# 权限分级配置
+agent_permissions:
+  read_only:
+    - view_logs
+    - query_metrics
+    - list_services
+  
+  standard:
+    - restart_service
+    - clear_cache
+    - scale_out
+  
+  elevated:  # 需要审批
+    - modify_config
+    - rollback_deployment
+    - access_secrets
+  
+  forbidden:  # 永不授权
+    - drop_database
+    - change_password
+    - modify_firewall
+```
+
+**技术实现**：
+
+```python
+class PermissionManager:
+    def __init__(self, agent_role):
+        self.role = agent_role
+        self.permissions = self.load_permissions()
+    
+    def check_permission(self, action):
+        if action in self.permissions['forbidden']:
+            raise PermissionDenied(f"Action {action} is forbidden")
+        if action in self.permissions['elevated']:
+            return self.request_approval(action)
+        if action in self.permissions.get(self.role, []):
+            return True
+        return False
+```
+
+#### 原则二：主动防御（Defense in Depth）
+
+**定义**：不依赖单一防线，建立多层防护机制。
+
+**防护层级**：
+
+```
+┌─────────────────────────────────────────────┐
+│              主动防御体系                     │
+├─────────────────────────────────────────────┤
+│  第 1 层：输入验证                            │
+│  - 验证指令格式和参数                         │
+│  - 过滤危险字符和注入                         │
+├─────────────────────────────────────────────┤
+│  第 2 层：行为分析                            │
+│  - 异常行为检测（偏离历史模式）                │
+│  - 风险评估（影响范围、可逆性）               │
+├─────────────────────────────────────────────┤
+│  第 3 层：沙箱隔离                            │
+│  - 危险操作在隔离环境执行                     │
+│  - 变更前快照，失败后回滚                     │
+├─────────────────────────────────────────────┤
+│  第 4 层：实时熔断                            │
+│  - 监控执行结果                               │
+│  - 异常时立即中止并告警                       │
+└─────────────────────────────────────────────┘
+```
+
+**实现示例**：
+
+```python
+class DefenseLayer:
+    def execute_with_defense(self, action):
+        # 第 1 层：输入验证
+        if not self.validate_input(action):
+            return "输入验证失败"
+        
+        # 第 2 层：行为分析
+        risk_score = self.analyze_risk(action)
+        if risk_score > 0.7:
+            return self.request_human_review(action, risk_score)
+        
+        # 第 3 层：沙箱执行
+        snapshot = self.create_snapshot()
+        try:
+            # 第 4 层：实时监控
+            with self.monitor_context(action):
+                result = self.sandbox_execute(action)
+        except Exception as e:
+            self.rollback(snapshot)
+            self.alert_team(e)
+            return f"执行失败，已回滚: {e}"
+        
+        return result
+```
+
+#### 原则三：持续审计（Continuous Auditing）
+
+**定义**：所有 Agent 行为可追溯、可审计、可复盘。
+
+**审计内容**：
+
+| 审计项 | 内容 | 保留期限 |
+|--------|------|----------|
+| 决策日志 | 为什么做这个决策 | 永久 |
+| 执行记录 | 执行了什么操作 | 1 年 |
+| 效果验证 | 操作后的系统状态 | 90 天 |
+| 人工干预 | 人工纠正的记录 | 永久 |
+
+**审计日志格式**：
+
+```json
+{
+  "timestamp": "2026-03-11T00:38:00Z",
+  "agent_id": "ops-agent-001",
+  "action": "restart_service",
+  "decision_reason": "内存使用率 > 95%，持续 5 分钟",
+  "risk_score": 0.3,
+  "approval_status": "auto_approved",
+  "execution_result": "success",
+  "affected_systems": ["api-server-1", "api-server-2"],
+  "rollback_snapshot": "snap-20260311-003800",
+  "human_review_required": false
+}
+```
+
+**审计分析**：
+
+```python
+class AuditAnalyzer:
+    def generate_report(self, period='weekly'):
+        return {
+            'total_actions': self.count_actions(period),
+            'auto_approved_rate': self.calculate_auto_rate(period),
+            'human_intervention_rate': self.calculate_intervention_rate(period),
+            'failure_rate': self.calculate_failure_rate(period),
+            'risk_distribution': self.analyze_risk_distribution(period),
+            'recommendations': self.generate_recommendations()
+        }
+```
+
+---
+
+#### 操作边界配置
+
+基于三大原则，设置具体操作边界：
 
 ```yaml
 safety_policy:
