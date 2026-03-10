@@ -1,0 +1,292 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-bvzihdzo> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" href="/favicon.ico"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="HTTEN 的博客" href="https://htten.github.io/rss.xml"><meta name="generator" content="Astro v6.0.0"><!-- Font preloads --><link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin><link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin><!-- Canonical URL --><link rel="canonical" href="https://htten.github.io/blog/ai-agent-evolution-stages/"><!-- Primary Meta Tags --><title>从&quot;能用&quot;到&quot;可训练&quot;：AI Agent 进化的四个阶段</title><meta name="title" content="从&#34;能用&#34;到&#34;可训练&#34;：AI Agent 进化的四个阶段"><meta name="description" content="深入分析 AI Agent 从基础功能到自我进化的演进路径，揭示可训练性的核心机制"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://htten.github.io/blog/ai-agent-evolution-stages/"><meta property="og:title" content="从&#34;能用&#34;到&#34;可训练&#34;：AI Agent 进化的四个阶段"><meta property="og:description" content="深入分析 AI Agent 从基础功能到自我进化的演进路径，揭示可训练性的核心机制"><meta property="og:image" content="https://htten.github.io/_astro/blog-placeholder-1.Bx0Zcyzv.jpg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://htten.github.io/blog/ai-agent-evolution-stages/"><meta property="twitter:title" content="从&#34;能用&#34;到&#34;可训练&#34;：AI Agent 进化的四个阶段"><meta property="twitter:description" content="深入分析 AI Agent 从基础功能到自我进化的演进路径，揭示可训练性的核心机制"><meta property="twitter:image" content="https://htten.github.io/_astro/blog-placeholder-1.Bx0Zcyzv.jpg"><style>:root{--accent: #2337ff;--accent-dark: #000d8a;--black: 15, 18, 25;--gray: 96, 115, 159;--gray-light: 229, 233, 240;--gray-dark: 34, 41, 57;--gray-gradient: rgba(var(--gray-light), 50%), #fff;--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%)}@font-face{font-family:Atkinson;src:url(/fonts/atkinson-regular.woff) format("woff");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:Atkinson;src:url(/fonts/atkinson-bold.woff) format("woff");font-weight:700;font-style:normal;font-display:swap}body{font-family:Atkinson,sans-serif;margin:0;padding:0;text-align:left;background:linear-gradient(var(--gray-gradient)) no-repeat;background-size:100% 600px;word-wrap:break-word;overflow-wrap:break-word;color:rgb(var(--gray-dark));font-size:20px;line-height:1.7}main{width:720px;max-width:calc(100% - 2em);margin:auto;padding:3em 1em}h1,h2,h3,h4,h5,h6{margin:0 0 .5rem;color:rgb(var(--black));line-height:1.2}h1{font-size:3.052em}h2{font-size:2.441em}h3{font-size:1.953em}h4{font-size:1.563em}h5{font-size:1.25em}strong,b{font-weight:700}a,a:hover{color:var(--accent)}p{margin-bottom:1em}.prose p{margin-bottom:2em}textarea{width:100%;font-size:16px}input{font-size:16px}table{width:100%}img{max-width:100%;height:auto;border-radius:8px}code{padding:2px 5px;background-color:rgb(var(--gray-light));border-radius:2px}pre{padding:1.5em;border-radius:8px}pre>code{all:unset}blockquote{border-left:4px solid var(--accent);padding:0 0 0 20px;margin:0;font-size:1.333em}hr{border:none;border-top:1px solid rgb(var(--gray-light))}@media(max-width:720px){body{font-size:18px}main{padding:1em}}.sr-only{border:0;padding:0;margin:0;position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);clip-path:inset(50%);white-space:nowrap}footer[data-astro-cid-sz7xmlte]{padding:2em 1em 6em;background:linear-gradient(var(--gray-gradient)) no-repeat;color:rgb(var(--gray));text-align:center}.social-links[data-astro-cid-sz7xmlte]{display:flex;justify-content:center;gap:1em;margin-top:1em}.social-links[data-astro-cid-sz7xmlte] a[data-astro-cid-sz7xmlte]{text-decoration:none;color:rgb(var(--gray))}.social-links[data-astro-cid-sz7xmlte] a[data-astro-cid-sz7xmlte]:hover{color:rgb(var(--gray-dark))}a[data-astro-cid-eimmu3lg]{display:inline-block;text-decoration:none}a[data-astro-cid-eimmu3lg].active{font-weight:bolder;text-decoration:underline}header[data-astro-cid-3ef6ksr2]{margin:0;padding:0 1em;background:#fff;box-shadow:0 2px 8px rgba(var(--black),5%)}h2[data-astro-cid-3ef6ksr2]{margin:0;font-size:1em}h2[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2],h2[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].active{text-decoration:none}nav[data-astro-cid-3ef6ksr2]{display:flex;align-items:center;justify-content:space-between}nav[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2]{padding:1em .5em;color:var(--black);border-bottom:4px solid transparent;text-decoration:none}nav[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].active{text-decoration:none;border-bottom-color:var(--accent)}.social-links[data-astro-cid-3ef6ksr2],.social-links[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2]{display:flex}@media(max-width:720px){.social-links[data-astro-cid-3ef6ksr2]{display:none}}
+main[data-astro-cid-bvzihdzo]{width:calc(100% - 2em);max-width:100%;margin:0}.hero-image[data-astro-cid-bvzihdzo]{width:100%}.hero-image[data-astro-cid-bvzihdzo] img[data-astro-cid-bvzihdzo]{display:block;margin:0 auto;border-radius:12px;box-shadow:var(--box-shadow)}.prose[data-astro-cid-bvzihdzo]{width:720px;max-width:calc(100% - 2em);margin:auto;padding:1em;color:rgb(var(--gray-dark))}.title[data-astro-cid-bvzihdzo]{margin-bottom:1em;padding:1em 0;text-align:center;line-height:1}.title[data-astro-cid-bvzihdzo] h1[data-astro-cid-bvzihdzo]{margin:0 0 .5em}.date[data-astro-cid-bvzihdzo]{margin-bottom:.5em;color:rgb(var(--gray))}.last-updated-on[data-astro-cid-bvzihdzo]{font-style:italic}
+</style></head> <body data-astro-cid-bvzihdzo> <header data-astro-cid-3ef6ksr2> <nav data-astro-cid-3ef6ksr2> <h2 data-astro-cid-3ef6ksr2><a href="/" data-astro-cid-3ef6ksr2>HTTEN 的博客</a></h2> <div class="internal-links" data-astro-cid-3ef6ksr2> <a href="/" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> 首页 </a> <a href="/blog" class="active" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> 博客 </a> <a href="/tags" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> 标签 </a> <a href="/about" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> 关于 </a> </div> <div class="social-links" data-astro-cid-3ef6ksr2> <a href="https://github.com/htten" target="_blank" title="GitHub" data-astro-cid-3ef6ksr2> <span class="sr-only" data-astro-cid-3ef6ksr2>GitHub</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="24" height="24" data-astro-cid-3ef6ksr2><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" data-astro-cid-3ef6ksr2></path></svg> </a> </div> </nav> </header> <main data-astro-cid-bvzihdzo> <article data-astro-cid-bvzihdzo> <div class="hero-image" data-astro-cid-bvzihdzo>  </div> <div class="prose" data-astro-cid-bvzihdzo> <div class="title" data-astro-cid-bvzihdzo> <div class="date" data-astro-cid-bvzihdzo> <time datetime="2026-03-11T00:00:00.000Z"> Mar 11, 2026 </time>  </div> <h1 data-astro-cid-bvzihdzo>从&quot;能用&quot;到&quot;可训练&quot;：AI Agent 进化的四个阶段</h1> <hr data-astro-cid-bvzihdzo> </div>  <h2 id="引言">引言</h2>
+<p>当我们谈论 AI Agent 时，大多数人还在”能用”的阶段。</p>
+<p>但真正的变革，发生在 Agent 变得”可训练”的那一刻。</p>
+<p>这篇文章，我想从实践者的角度，聊聊 Agent 进化的四个阶段——以及为什么”可训练性”是下一个战场。</p>
+<hr>
+<h2 id="一四个阶段的定义">一、四个阶段的定义</h2>
+<h3 id="阶段对照表">阶段对照表</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>阶段</th><th>特征</th><th>用户感知</th><th>典型案例</th></tr></thead><tbody><tr><td><strong>能用</strong></td><td>功能闭环</td><td>”能完成”</td><td>ChatGPT、Claude</td></tr><tr><td><strong>好用</strong></td><td>体验优化</td><td>”愿意用”</td><td>Notion AI、Cursor</td></tr><tr><td><strong>懂你</strong></td><td>个性化</td><td>”离不开”</td><td>OpenClaw、Cursor Rules</td></tr><tr><td><strong>可训练</strong></td><td>自定义行为</td><td>”专属助手”</td><td>自定义 Agent</td></tr></tbody></table>
+<p>这不是线性进化，而是能力的叠加。每个阶段都是下一阶段的基础。</p>
+<hr>
+<h2 id="二阶段-1能用-基础能力的建立">二、阶段 1：能用—— 基础能力的建立</h2>
+<h3 id="什么算能用">什么算”能用”？</h3>
+<p><strong>标准</strong>：能完成用户交给的任务，不崩溃、不胡说。</p>
+<p><strong>核心能力</strong>：</p>
+<ul>
+<li>自然语言理解</li>
+<li>任务执行</li>
+<li>错误处理</li>
+</ul>
+<p><strong>问题</strong>：</p>
+<ul>
+<li>每次对话从零开始</li>
+<li>没有上下文记忆</li>
+<li>行为不可预测</li>
+</ul>
+<p><strong>典型案例</strong>：早期的 ChatGPT</p>
+<p>你问它问题，它回答。你让它写代码，它写。但下次对话，它忘了你是谁，忘了你刚才说了什么。</p>
+<hr>
+<h2 id="三阶段-2好用-体验的打磨">三、阶段 2：好用—— 体验的打磨</h2>
+<h3 id="从能用到好用差在哪">从”能用”到”好用”，差在哪？</h3>
+<p><strong>差在降低认知负荷。</strong></p>
+<h3 id="关键优化点">关键优化点</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>维度</th><th>优化前</th><th>优化后</th></tr></thead><tbody><tr><td>输入</td><td>手打长 prompt</td><td>模板化、快捷指令</td></tr><tr><td>输出</td><td>长篇大论</td><td>结构化、可复制</td></tr><tr><td>错误</td><td>报错退出</td><td>自动重试、降级方案</td></tr><tr><td>集成</td><td>孤立工具</td><td>工作流嵌入</td></tr></tbody></table>
+<p><strong>典型案例</strong>：Cursor</p>
+<ul>
+<li>内嵌 VS Code，不用切换窗口</li>
+<li>Tab 键自动补全</li>
+<li>上下文自动注入当前文件</li>
+<li>错误时给出修复建议</li>
+</ul>
+<p><strong>本质</strong>：好用 = 减少用户的”思考时间”。</p>
+<hr>
+<h2 id="四阶段-3懂你-记忆与个性化">四、阶段 3：懂你—— 记忆与个性化</h2>
+<h3 id="这是最关键的跃迁">这是最关键的跃迁</h3>
+<p><strong>从”通用的好工具”变成”你的专属助手”。</strong></p>
+<h3 id="实现路径">实现路径</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>会话记忆 → 偏好学习 → 行为预测</span></span></code></pre>
+<h3 id="技术实现">技术实现</h3>
+<p><strong>1. 记忆系统</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>短期记忆（会话级）</span></span>
+<span class="line"><span>    ↓</span></span>
+<span class="line"><span>长期记忆（用户级）</span></span>
+<span class="line"><span>    ↓</span></span>
+<span class="line"><span>持久化存储（文件/数据库）</span></span></code></pre>
+<p><strong>2. 偏好提取</strong></p>
+<p>从对话中学习：</p>
+<ul>
+<li>你喜欢什么风格</li>
+<li>你常用的术语</li>
+<li>你的工作习惯</li>
+</ul>
+<p><strong>3. 上下文感知</strong></p>
+<ul>
+<li>知道当前时间、位置</li>
+<li>知道你在做什么项目</li>
+<li>知道你的历史决策</li>
+</ul>
+<p><strong>典型案例</strong>：OpenClaw</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>~/.openclaw/workspace/</span></span>
+<span class="line"><span>├── SOUL.md      # Agent 的身份</span></span>
+<span class="line"><span>├── USER.md      # 用户画像</span></span>
+<span class="line"><span>├── MEMORY.md    # 长期记忆</span></span>
+<span class="line"><span>└── AGENTS.md    # 行为规则</span></span></code></pre>
+<p>这些文件定义了”我是谁”、“你是谁”、“我们如何协作”。</p>
+<hr>
+<h2 id="五阶段-4可训练-自定义行为">五、阶段 4：可训练—— 自定义行为</h2>
+<h3 id="这是真正的变革">这是真正的变革</h3>
+<p><strong>“可训练”意味着用户可以定义 Agent 的行为，而不仅仅是使用它。</strong></p>
+<h3 id="三个层次的可训练性">三个层次的可训练性</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>层次</th><th>用户能力</th><th>实现方式</th></tr></thead><tbody><tr><td><strong>配置</strong></td><td>调整参数</td><td>设置界面</td></tr><tr><td><strong>规则</strong></td><td>定义行为</td><td>规则文件</td></tr><tr><td><strong>技能</strong></td><td>扩展能力</td><td>插件/技能系统</td></tr></tbody></table>
+<h3 id="openclaw-的实现">OpenClaw 的实现</h3>
+<p><strong>1. 配置层</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "model"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"qianfan-code-latest"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "timeout"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">180</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "thinking"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"off"</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p><strong>2. 规则层</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#79B8FF;font-weight:bold"># AGENTS.md</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">## 子代理触发规则</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 图片分析 → DoubaoCode</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 代码审查 → DoubaoCode</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 快速问答 → 直接处理</span></span></code></pre>
+<p><strong>3. 技能层</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#79B8FF;font-weight:bold"># SKILL.md</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">## 触发条件</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 用户提及"知识库"</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 需要查询大量文档</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">## 执行逻辑</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 初始化向量数据库</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 插入文档</span></span>
+<span class="line"><span style="color:#FFAB70">3.</span><span style="color:#E1E4E8"> 语义检索</span></span></code></pre>
+<hr>
+<h2 id="六可训练性的核心机制">六、可训练性的核心机制</h2>
+<h3 id="61-反馈闭环">6.1 反馈闭环</h3>
+<p><strong>传统 Agent</strong>：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>用户输入 → Agent 输出 → 结束</span></span></code></pre>
+<p><strong>可训练 Agent</strong>：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>用户输入 → Agent 输出 → 用户反馈 → Agent 调整 → 记忆更新</span></span></code></pre>
+<h3 id="62-错误学习系统">6.2 错误学习系统</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#79B8FF;font-weight:bold">## [</span><span style="color:#DBEDFF;text-decoration:underline">2026-03-11</span><span style="color:#79B8FF;font-weight:bold">] 配置错误示例</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8;font-weight:bold">**错误**</span><span style="color:#E1E4E8">：飞书群消息无响应</span></span>
+<span class="line"><span style="color:#E1E4E8;font-weight:bold">**原因**</span><span style="color:#E1E4E8">：requireMention 默认为 true</span></span>
+<span class="line"><span style="color:#E1E4E8;font-weight:bold">**解决**</span><span style="color:#E1E4E8">：设置 groups.*.requireMention: false</span></span>
+<span class="line"><span style="color:#E1E4E8;font-weight:bold">**预防**</span><span style="color:#E1E4E8">：配置时明确指定所有布尔参数</span></span></code></pre>
+<p>每次错误，都成为下次不犯错的依据。</p>
+<h3 id="63-知识提炼">6.3 知识提炼</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>日常对话 → daily notes → 分析提炼 → 更新长期记忆</span></span></code></pre>
+<p>不是所有内容都值得记住。Agent 需要”遗忘机制”——保留精华，丢弃噪音。</p>
+<hr>
+<h2 id="七为什么可训练是下一个战场">七、为什么”可训练”是下一个战场？</h2>
+<h3 id="71-从工具到伙伴">7.1 从工具到伙伴</h3>
+<p>“能用”的工具是锤子。
+“好用”的工具是电动锤子。
+“懂你”的工具是你定制的电动锤子。
+“可训练”的工具是能自己学会怎么锤的机器人。</p>
+<h3 id="72-网络效应">7.2 网络效应</h3>
+<p>当用户可以训练自己的 Agent：</p>
+<ul>
+<li>每个用户的 Agent 都不同</li>
+<li>训练经验可以共享</li>
+<li>形成技能市场</li>
+</ul>
+<p><strong>类比</strong>：WordPress 主题市场 → AI Agent 技能市场</p>
+<h3 id="73-护城河">7.3 护城河</h3>
+<p>技术可以复制，但：</p>
+<ul>
+<li>用户的训练数据无法复制</li>
+<li>个性化的行为规则无法复制</li>
+<li>积累的知识无法复制</li>
+</ul>
+<p><strong>真正的护城河是”用户投入的时间”。</strong></p>
+<hr>
+<h2 id="八实践建议">八、实践建议</h2>
+<h3 id="如果你在选型">如果你在选型</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>需求</th><th>选择</th></tr></thead><tbody><tr><td>偶尔使用</td><td>”能用”就够了</td></tr><tr><td>每天使用</td><td>选择”好用”的工具</td></tr><tr><td>长期协作</td><td>必须选”懂你”的</td></tr><tr><td>定制化需求</td><td>只有”可训练”能满足</td></tr></tbody></table>
+<h3 id="如果你在开发">如果你在开发</h3>
+<p><strong>短期</strong>：把基础能力做好（能用、好用）
+<strong>中期</strong>：建立记忆系统（懂你）
+<strong>长期</strong>：设计可训练机制（技能、规则、反馈闭环）</p>
+<p><strong>关键问题</strong>：</p>
+<ol>
+<li>用户如何”教”Agent？</li>
+<li>Agent 如何”记住”？</li>
+<li>用户如何”纠正”Agent？</li>
+</ol>
+<hr>
+<h2 id="结语">结语</h2>
+<p>从”能用”到”可训练”，不是技术的堆砌，而是<strong>人与 AI 关系的演变</strong>。</p>
+<ul>
+<li><strong>能用</strong>：我使用工具</li>
+<li><strong>好用</strong>：我喜欢这个工具</li>
+<li><strong>懂你</strong>：这个工具懂我</li>
+<li><strong>可训练</strong>：这个工具会随我成长</li>
+</ul>
+<p>未来，每个人都会有自己的 Agent。而区分”我的 Agent”和”别人的 Agent”的，不是它的基础能力，而是<strong>它被训练成什么样</strong>。</p>
+<hr>
+<p><em>这才是 AI Agent 的真正战场。</em></p>  </div> </article> </main> <footer data-astro-cid-sz7xmlte>
+&copy; 2026 Your name here. All rights reserved.
+<div class="social-links" data-astro-cid-sz7xmlte> <a href="https://m.webtoo.ls/@astro" target="_blank" data-astro-cid-sz7xmlte> <span class="sr-only" data-astro-cid-sz7xmlte>Follow Astro on Mastodon</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" astro-icon="social/mastodon" data-astro-cid-sz7xmlte><path fill="currentColor" d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z" data-astro-cid-sz7xmlte></path></svg> </a> <a href="https://twitter.com/astrodotbuild" target="_blank" data-astro-cid-sz7xmlte> <span class="sr-only" data-astro-cid-sz7xmlte>Follow Astro on Twitter</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" astro-icon="social/twitter" data-astro-cid-sz7xmlte><path fill="currentColor" d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" data-astro-cid-sz7xmlte></path></svg> </a> <a href="https://github.com/withastro/astro" target="_blank" data-astro-cid-sz7xmlte> <span class="sr-only" data-astro-cid-sz7xmlte>Go to Astro's GitHub repo</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" astro-icon="social/github" data-astro-cid-sz7xmlte><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" data-astro-cid-sz7xmlte></path></svg> </a> </div> </footer> </body></html>
